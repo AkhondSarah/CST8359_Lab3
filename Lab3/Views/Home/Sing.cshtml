@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http;
+@{
+    Layout = "_Layout";
+   if (int.TryParse(ViewBag.noofbottles.ToString(), out int j)){
+
+  if ( j == j){
+    ViewBag.noofbottles = j;
+  }
+}
+}
+   
+
+<html>
+    <body>
+   
+    <div>
+        <form method="post" action="/Home/SongForm">
+    <table>
+        <tr>
+            <td>
+                <button type="submit" name="Sing" value="Sing">Play Again</button>
+            </td>
+        </tr>
+        
+        </table>>
+        </form>
+        
+        
+    
+   @for (int i = j; i > 1; i--){
+  @if(i > 2)
+  {
+   
+    <p>   @i green bottles hanging on the wall,<br>
+    @i green bottles hanging on the wall,<br>
+    And if one green bottle should accidentally fall,<br>
+    There'll be @(i-1) green bottles hanging on the wall.<br>
+     
+     </p>  
+  
+  }
+  @if (i == 2)
+  {
+   
+    
+    <p>
+    @i green bottles hanging on the wall,<br>
+    @i green bottles hanging on the wall,<br>
+    And if one green bottle should accidentally fall,<br>
+    There'll be 1 green bottle hanging on the wall.<br>
+    </p>  
+  }
+}
+//Here is where you would put the last part of the loop
+<p>
+    1 green bottles hanging on the wall,<br>
+    1 green bottles hanging on the wall,<br>
+    And if one green bottle should accidentally fall,<br>
+    There'll be no green bottles hanging on the wall.<br>
+    </p>
+}
+
+        </body>
+ </html>       
+       
+       
+   

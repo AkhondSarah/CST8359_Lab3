@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Hello! Welcome to my Lab 3</h1>
+        <p>My name is Akhond Sarah Mesbah</p>
+        <br />
+        <br />
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Show the song!", "SongForm", "Home")
+       
+        @Html.ActionLink("Persons", "CreatePerson", "Home")
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        A Layout file allows us to reuse portions of View 
+content (common elements) instead of 
+implementing these visual elements on every page <br />
+    </footer>
+</body>
+</html>
